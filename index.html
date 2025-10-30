@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARAYI INFOTECH | Full Compliance & Accounting Services (GST, PF, ESI, Audit)</title>
+    <meta name="description" content="ARAYI INFOTECH offers comprehensive services including GST Filing, Income Tax, PF/ESI Compliance, Internal Audit, Tally/Zoho support, and Training & Certification in Chennai.">
+    <meta name="keywords" content="GST Registration Chennai, Income Tax Filing, PF/ESI Compliance, Internal Audit, Tally Zoho Books, MSME Certificate, PF Claim, ARAYI INFOTECH">
+    <meta name="author" content="Rajiv Srinivasan - ARAYI INFOTECH">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #17a2b8; /* Brighter blue/cyan */
+            --dark-bg: #1a1a2e; 
+            --card-bg: #2c2c44; 
+            --text-color: #f0f0f0; /* Bright White/Off-White */
+            --muted-text: #adb5bd; /* Light Gray for secondary text */
+            --whatsapp-color: #25D366; 
+            --footer-bg: #11111d; 
+            
+            /* VIBRANT ACCENT COLOR (Electric Blue/Aqua) */
+            --accent-vibrant: #00ffff; 
+            
+            /* CHAT BUBBLE COLORS */
+            --bubble-bg-light: #d5f5f5; 
+            --bubble-text-dark: #1a1a2e; 
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color); 
+        }
+        .navbar {
+            background-color: rgba(26, 26, 46, 0.98); 
+        }
+
+        /* LOGO STYLES */
+        .navbar-brand img {
+        height: 50px; /* Adjusted size */
+        width: 50px;  /* Made equal to height */
+        max-height: 50px; 
+        
+        /* *** CHANGES FOR CIRCLE SHAPE *** */
+        border-radius: 50%; /* Makes the image a perfect circle */
+        object-fit: cover;  /* Ensures image content fills the circle */
+        border: 2px solid var(--primary-color); /* Optional: Adds a subtle, themed border */
+    }
+
+        .hero-section {
+    /* Replace 'path/to/your/image.jpg' with the actual path */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: Makes the background scroll-independent (Parallax effect) */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-top: 56px; 
+}
+        
+        /* --- TYPING ANIMATION STYLES (Kept for completeness) --- */
+        .hero-section .typed-text-container {
+            display: inline-block;
+            min-height: 1.2em;
+        }
+
+        .hero-section .typed-text {
+            color: var(--accent-vibrant);
+            font-weight: 700;
+            overflow: hidden;
+            border-right: .15em solid var(--accent-vibrant);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .05em;
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+            width: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent-vibrant); }
+        }
+        /* ------------------------------------------- */
+
+        .stat-box {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            height: 100%;
+            text-align: center;
+            border: 1px solid transparent; 
+            color: var(--text-color); 
+            cursor: pointer; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .service-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        .text-muted {
+            color: var(--muted-text) !important;
+        }
+        .icon-box i {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* --- MARQUEE STYLES --- */
+        .about-marquee {
+            overflow: hidden;
+            background-color: var(--card-bg); 
+            padding: 15px 0;
+            border-top: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .about-marquee .marq {
+            white-space: nowrap;
+            display: inline-block;
+            animation: marquee-roll 30s linear infinite; 
+        }
+
+        .about-marquee span {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-vibrant);
+            padding: 0 40px; 
+            display: inline-block;
+        }
+
+        @keyframes marquee-roll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        /* --- END MARQUEE STYLES --- */
+        
+        /* --- WHATSAPP FLOATING ICON STYLES --- */
+        .whatsapp-float {
+            position: fixed; 
+            bottom: 25px; 
+            right: 25px; 
+            z-index: 1000; 
+            cursor: pointer; 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none;
+            width: auto;
+        }
+        .whatsapp-icon {
+            background-color: var(--whatsapp-color); 
+            width: 55px; 
+            height: 55px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-icon i { color: white; font-size: 30px; }
+        
+        .whatsapp-message {
+            background-color: var(--bubble-bg-light); 
+            color: var(--bubble-text-dark); 
+            padding: 10px 15px; 
+            border-radius: 20px; 
+            margin-right: 5px; 
+            white-space: nowrap; 
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
+            animation: bounce-horizontal 2s ease-in-out infinite; 
+        }
+
+        @keyframes bounce-horizontal {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-5px); } 
+        }
+
+        .whatsapp-float:hover .whatsapp-icon { 
+            transform: scale(1.05); 
+        }
+
+        @media (max-width: 767px) {
+            .whatsapp-float { 
+                bottom: 15px; 
+                right: 15px; 
+            }
+            .hero-section h1 { font-size: 2.2rem; }
+            .hero-section { height: auto; padding: 120px 0 80px; }
+        }
+        /* --- FOOTER STYLES --- */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--muted-text); 
+            padding-top: 50px;
+        }
+        footer h5 {
+            color: var(--text-color); 
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        footer a {
+            color: var(--muted-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        /* --- MODAL STYLES --- */
+        .modal-content {
+            background-color: var(--card-bg);
+            border: 1px solid var(--primary-color);
+        }
+        .modal-header {
+            border-bottom: 1px solid rgba(23, 162, 184, 0.3);
+        }
+        .modal-header h5 {
+            color: var(--accent-vibrant); 
+        }
+        .list-group-item {
+            background-color: var(--dark-bg);
+            border-color: rgba(23, 162, 184, 0.2);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="serviceModalLabel">Service Requirements</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4 id="modal-service-title" class="fw-bold mb-3 text-primary"></h4>
+            <p id="modal-service-description" class="text-muted mb-4"></p>
+            
+            <h5 class="fw-bold mb-3"><i class="bi bi-file-text-fill me-2" style="color: var(--accent-vibrant);"></i> Required Documents Checklist</h5>
+            <ul class="list-group" id="modal-document-list">
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="ARAYI INFOTECH Logo">
+            </a>
+            <span class="ms-2 fw-bold" style="font-size: 1.5rem; color: var(--text-color);">
+                ARAYI INFOTECH
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Why Choose Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary ms-lg-3 mt-2 mt-lg-0">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section text-center text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <h1 class="display-3 fw-bold mb-4">
+                            Your Trusted Partner for 
+                            <span style="color: var(--accent-vibrant);">Full Compliance.</span>
+                        </h1>
+                        <p class="lead mb-5">
+                            We simplify **GST, Income Tax, PF, and ESI** filing, providing expert support to keep your business fully compliant and stress-free.
+                        </p>
+                        <a href="#contact" class="btn btn-primary btn-lg me-3 mb-3 mb-lg-0">Get Started</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg mb-3 mb-lg-0">View All Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-md-4"><div class="stat-box"><h2 class="display-4 fw-bold text-primary">15+</h2><p class="mb-0 text-muted">Years of Expertise</p></div></div>
+                    <div class="col-md-4"><div class="stat-box"><h2 class="display-4 fw-bold text-primary">98%</h2><p class="mb-0 text-muted">Filing Accuracy Rate</p></div></div>
+                    <div class="col-md-4"><div class="stat-box"><h2 class="display-4 fw-bold text-primary">500+</h2><p class="mb-0 text-muted">Satisfied Clients</p></div></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">DISCOVER OUR STORY</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <img src="img2.png" class="img-fluid rounded shadow" alt="Team discussing compliance strategies">
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold mb-3">Innovative Solutions for Stress-Free Compliance.</h3>
+                        <p class="text-muted">ARAYI INFOTECH is dedicated to helping small and medium-sized enterprises (MSMEs) navigate the complex landscape of Indian tax and labour laws. Our goal is to ensure your business remains fully compliant, allowing you to focus on growth.</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Expert Team led by Partner **Rajiv Srinivasan**.</li>
+                            <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Comprehensive support from GST to PF Claims and advance.</li>
+                            <li class="d-flex align-items-start mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Utilizing industry-standard accounting tools like **Tally** and **Zoho Books**.</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary mt-3">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="about-marquee mt-4">
+            <div class="marq">
+                <span class="me-4">✅ WCAG High-Contrast Design</span>
+                <span class="me-4">✅ 24–48 Hour Onboarding</span>
+                <span class="me-4">✅ Tally & Zoho Experts</span>
+                <span class="me-4">✅ Secure Document Upload</span>
+                <span class="me-4">✅ Serving Chennai MSMEs Since 2008</span>
+                
+                <span class="me-4">✅ WCAG High-Contrast Design</span>
+                <span class="me-4">✅ 24–48 Hour Onboarding</span>
+                <span class="me-4">✅ Tally & Zoho Experts</span>
+                <span class="me-4">✅ Secure Document Upload</span>
+                <span class="me-4">✅ Serving Chennai MSMEs Since 2008</span>
+            </div>
+        </div>
+        
+        <section id="why-us" class="py-5 bg-dark">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-3">Why Choose ARAYI INFOTECH?</h2>
+                <p class="text-center text-muted mb-5">We combine technical expertise with a client-first approach to deliver reliable results.</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="why-us-item text-center">
+                            <div class="icon-box"><i class="bi bi-lightbulb-fill"></i></div>
+                            <h4 class="fw-bold">Customized Strategies</h4>
+                            <p class="text-muted">We provide tailored compliance plans that fit your unique business structure and growth stage.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="why-us-item text-center">
+                            <div class="icon-box"><i class="bi bi-shield-check"></i></div>
+                            <h4 class="fw-bold">Zero Compliance Risk</h4>
+                            <p class="text-muted">Our focus on accuracy ensures you meet all deadlines for **GST, TDS, and PF** filing with confidence.</p></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="why-us-item text-center">
+                            <div class="icon-box"><i class="bi bi-person-workspace"></i></div>
+                            <h4 class="fw-bold">End-to-End Support</h4>
+                            <p class="text-muted">From **MSME Certificate** acquisition to **PF Claims**, we handle the paperwork so you don't have to.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-3">Our Comprehensive Compliance & Accounting Services</h2>
+                <p class="text-center text-muted mb-5">Click on any service card or button to see the detailed required documents! 👇</p>
+                
+                <div class="row g-4 mb-5 justify-content-center">
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="gst">
+                        <div class="icon-box"><i class="bi bi-receipt-cutoff"></i></div>
+                        <h4 class="fw-bold mt-3">GST Registration & Filing</h4>
+                        <p class="text-muted mb-3">Hassle-free registration and timely monthly/quarterly return submissions.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="it">
+                        <div class="icon-box"><i class="bi bi-file-earmark-person"></i></div>
+                        <h4 class="fw-bold mt-3">Income Tax Filing</h4>
+                        <p class="text-muted mb-3">Expert ITR filing, tax computation, and full audit support for businesses and individuals.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="pfesi">
+                        <div class="icon-box"><i class="bi bi-shield-lock-fill"></i></div>
+                        <h4 class="fw-bold mt-3">PF & ESI Compliance</h4>
+                        <p class="text-muted mb-3">Mandatory registration and accurate filing of employee contributions.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="tds">
+                        <div class="icon-box"><i class="bi bi-bank"></i></div>
+                        <h4 class="fw-bold mt-3">TDS Registration & Filing</h4>
+                        <p class="text-muted mb-3">Handling all aspects of Tax Deducted at Source (TDS) and TCS compliance.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="books">
+                        <div class="icon-box"><i class="bi bi-book-half"></i></div>
+                        <h4 class="fw-bold mt-3">Accounts & Book Keeping</h4>
+                        <p class="text-muted mb-3">Professional daily transaction recording using Tally & Zoho Books.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="audit">
+                        <div class="icon-box"><i class="bi bi-search"></i></div>
+                        <h4 class="fw-bold mt-3">Internal Audit</h4>
+                        <p class="text-muted mb-3">Systematic review of financial operations to improve efficiency and detect risks.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="tally">
+                        <div class="icon-box"><i class="bi bi-laptop"></i></div>
+                        <h4 class="fw-bold mt-3">Tally & Zoho Books Support</h4>
+                        <p class="text-muted mb-3">Setup, configuration, troubleshooting, and training for leading accounting software.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                    <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="reg">
+                        <div class="icon-box"><i class="bi bi-folder-check"></i></div>
+                        <h4 class="fw-bold mt-3">Business Registrations</h4>
+                        <p class="text-muted mb-3">Processing for **IE Code**, **MSME Certificate**, and **PAN Card** applications.</p>
+                        <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
+                        </div></div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <h3 class="fw-bold mb-4">Value-Added & Support Services</h3>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="row g-3">
+                            <div class="col-sm-6"><p class="p-3 bg-dark rounded"><i class="bi bi-arrow-right-short text-primary me-2"></i> **Training & Certification**</p></div>
+                            <div class="col-sm-6"><p class="p-3 bg-dark rounded"><i class="bi bi-arrow-right-short text-primary me-2"></i> **PF Claim / Advance** Processing</p></div>
+                            <div class="col-sm-6"><p class="p-3 bg-dark rounded"><i class="bi bi-arrow-right-short text-primary me-2"></i> **Print Out** Services</p></div>
+                            <div class="col-sm-6"><p class="p-3 bg-dark rounded"><i class="bi bi-arrow-right-short text-primary me-2"></i> **Online Services** Assistance</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-3">Let's Start a Conversation</h2>
+                <p class="text-center text-muted mb-5">Ready to achieve stress-free compliance? Contact us today.</p>
+
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <form id="contactForm" class="p-4 rounded" style="background-color: #2c2c44;">
+                            <div class="mb-3"><label for="name" class="form-label">Your Name</label><input type="text" class="form-control" id="name" required></div>
+                            <div class="mb-3"><label for="email" class="form-label">Email Address</label><input type="email" class="form-control" id="email" required></div>
+                            <div class="mb-3"><label for="phone" class="form-label">Phone Number</label><input type="tel" class="form-control" id="phone" placeholder="98765 43210" required></div>
+                            <div class="mb-3"><label for="subject" class="form-label">Subject</label><input type="text" class="form-control" id="subject" placeholder="E.g., GST Inquiry" required></div>
+                            <div class="mb-4"><label for="message" class="form-label">Message</label><textarea class="form-control" id="message" rows="5" placeholder="Tell us more about your project or query..."></textarea></div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <a href="mailto:rajivarayid@gmail.com" class="d-block rounded p-4 mb-4 link-offset-1-remove" style="background-color: #2c2c44; text-decoration: none;">
+                            <h4 class="text-primary"><i class="bi bi-envelope-fill me-2"></i> Email Us</h4>
+                            <p class="mb-1 fw-bold">rajivarayid@gmail.com</p>
+                            <p class="text-muted mb-0">Partner: Rajiv Srinivasan</p>
+                        </a>
+                        
+                        <a href="tel:+919094407286" class="d-block rounded p-4 mb-4 link-offset-1-remove" style="background-color: #2c2c44; text-decoration: none;">
+                            <h4 class="text-primary"><i class="bi bi-telephone-fill me-2"></i> Call Us</h4>
+                            <p class="mb-1 fw-bold">90944 07286 / 73970 97666</p>
+                            <p class="text-muted mb-0">Available **9:00 AM - 6:30 PM** IST</p>
+                        </a>
+
+                        <a href="https://www.google.com/maps/search/?api=1&query=16,+SVM+Nagar+3rd+Street,+Ennore,+Chennai+-+57" target="_blank" class="d-block rounded p-4 link-offset-1-remove" style="background-color: #2c2c44; text-decoration: none;">
+                            <h4 class="text-primary"><i class="bi bi-geo-alt-fill me-2"></i> Visit Our Office</h4>
+                            <p class="mb-1 fw-bold">#16, SVM Nagar 3rd Street, Ennore, Chennai - 57</p>
+                            <p class="text-muted mb-0">Click to view on Map</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold">ARAYI INFOTECH</h5>
+                    <p class="text-muted">Your trusted compliance partner in Chennai, specializing in tax, labor laws, and accounting support.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://wa.me/919094407286" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Core Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#services">GST & Income Tax Filing</a></li>
+                        <li><a href="#services">PF & ESI Compliance</a></li>
+                        <li><a href="#services">Accounts & Book Keeping</a></li>
+                        <li><a href="#services">Internal Audit</a></li>
+                        <li><a href="#services">Business Registrations</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <p class="mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> #16, SVM Nagar 3rd Street, Ennore, Chennai - 57</p>
+                    <p class="mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i> rajivarayid@gmail.com</p>
+                    <p class="mb-2"><i class="bi bi-phone-fill text-primary me-2"></i> 90944 07286</p>
+                    <p class="mb-2"><i class="bi bi-clock-fill text-primary me-2"></i> Mon-Sat: 9:00 AM - 6:30 PM</p>
+                </div>
+            </div>
+            
+            <div class="text-center py-3 border-top border-secondary opacity-50">
+                <p class="mb-0">© <span id="currentYear"></span> ARAYI INFOTECH. All Rights Reserved. Designed by BBS Solutions.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/919094407286?text=I%20am%20interested%20in%20in%20your%20services" target="_blank" class="whatsapp-float" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-message fw-bold">chat with us...</span>
+        <div class="whatsapp-icon">
+            <i class="bi bi-whatsapp"></i>
+        </div>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // --- EmailJS Setup ---
+        (function() {
+            // Initialize EmailJS. Use the Public Key provided in your last prompt.
+            // *** IMPORTANT: Replace with your actual key ***
+            emailjs.init({ publicKey: "kkIs0AW_QWCwwpPYk" });
+        })();
+    
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = "Sending...";
+
+            const params = {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                // New phone field included in parameters
+                phone: document.getElementById("phone").value, 
+                subject: document.getElementById("subject").value,
+                message: document.getElementById("message").value,
+                time: new Date().toLocaleString()
+            };
+
+            // Send the email. Use the Service ID and Template ID from your last prompt.
+            // *** IMPORTANT: Replace with your actual service/template IDs ***
+            emailjs.send("service_wghet5k", "template_urke8fl", params)
+                .then(function(response) {
+                    alert("✅ Thank you! Your message was sent successfully.");
+                    document.getElementById("contactForm").reset();
+                }, function(error) {
+                    alert("❌ Failed to send your message. Please try calling us instead.");
+                    console.error("EmailJS Error:", error);
+                })
+                .finally(function() {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Send Message";
+                });
+        });
+        
+        // --- Service Data Configuration with detailed requirements ---
+        const serviceData = {
+            gst: {
+                title: "GST Registration & Filing",
+                desc: "Seamless process for obtaining GST registration and accurate filing of all returns (GSTR-1, GSTR-3B, Annual Return).",
+                docs: [
+                    "PAN Card of Applicant/Business",
+                    "Aadhaar Card/ID Proof of Directors/Partners/Proprietor",
+                    "Proof of Business Address (Rent Agreement, Sale Deed, or Utility Bill NOT older than 2 months)",
+                    "Bank Account Proof (Cancelled Cheque or Bank Statement)",
+                    "Photograph of Directors/Partners/Proprietor",
+                    "Board Resolution or Authorization Letter (for companies/firms)"
+                ]
+            },
+            it: {
+                title: "Income Tax Filing",
+                desc: "Expert ITR filing, tax computation, and full audit support for businesses and individuals, ensuring maximum compliance and optimization.",
+                docs: [
+                    "PAN Card and Aadhaar Card of Applicant",
+                    "Form 16/Salary Slips (for salaried individuals)",
+                    "Bank Account Statements (last 1 year)",
+                    "Financial Statements (P&L, Balance Sheet) (for businesses)",
+                    "TDS Certificates (Form 16A/26AS)",
+                    "Investment proofs (if claiming deductions)"
+                ]
+            },
+            pfesi: {
+                title: "PF & ESI Compliance",
+                desc: "Mandatory registration and accurate monthly filing of employee contributions, including support for PF claims and advances.",
+                docs: [
+                    "PAN Card and Aadhaar Card of Proprietor/Directors",
+                    "Address Proof of Business",
+                    "Certificate of Incorporation/Registration Certificate",
+                    "List of Employees and their salary details",
+                    "Bank Account Details and Cancelled Cheque"
+                ]
+            },
+            tds: {
+                title: "TDS Registration & Filing",
+                desc: "Handling all aspects of Tax Deducted at Source (TDS) and Tax Collected at Source (TCS) compliance, including TAN registration and quarterly returns.",
+                docs: [
+                    "Company/Individual PAN Card",
+                    "Address Proof of Tax Deductor",
+                    "Certificate of Incorporation/Partnership Deed",
+                    "Mobile Number and Email ID",
+                    "Bank Account Details"
+                ]
+            },
+            books: {
+                title: "Accounts & Book Keeping",
+                desc: "Professional daily transaction recording, ledger maintenance, and financial reporting using industry-standard software like Tally and Zoho Books.",
+                docs: [
+                    "Sales & Purchase Invoices (Monthly/Quarterly)",
+                    "Bank/Cash Book Statements",
+                    "Expense Vouchers (Rent, Utility Bills, etc.)",
+                    "Inventory Details (if applicable)",
+                    "Existing Accounting Data/Software Backup"
+                ]
+            },
+            audit: {
+                title: "Internal Audit",
+                desc: "Systematic review of financial operations, internal controls, and compliance status to improve efficiency, accuracy, and detect potential risks and fraud.",
+                docs: [
+                    "Previous Year's Audited Financial Statements",
+                    "Complete Sales and Purchase Registers",
+                    "Bank Reconciliation Statements",
+                    "Inventory Records and Policies",
+                    "Internal Control Manuals (if any)"
+                ]
+            },
+            tally: {
+                title: "Tally & Zoho Books Support",
+                desc: "Complete setup, configuration, troubleshooting, data migration, and personalized training for leading accounting software solutions.",
+                docs: [
+                    "Software License Details (if existing)",
+                    "Current Chart of Accounts",
+                    "Opening Balances Data",
+                    "User Access Requirements",
+                    "Specific Customization Needs"
+                ]
+            },
+            reg: {
+                title: "Business Registrations",
+                desc: "Processing various mandatory business registrations, including MSME Udyam Certificate, Import Export (IE) Code, and PAN Card applications.",
+                docs: [
+                    "Aadhaar Card and PAN Card of Applicant",
+                    "Business Bank Account Details",
+                    "Proof of Business Activity (e.g., invoices/licenses)",
+                    "Utility Bill/Rent Agreement (for address proof)",
+                    "MOA/AOA (for Company registration)"
+                ]
+            }
+        };
+
+        // Event listener to populate the modal on show
+        const serviceModal = document.getElementById('serviceModal')
+        serviceModal.addEventListener('show.bs.modal', event => {
+            // Button that triggered the modal
+            const button = event.relatedTarget
+            // Extract info from data-service-id attribute
+            const serviceId = button.getAttribute('data-service-id')
+            const service = serviceData[serviceId]
+
+            if (service) {
+                // Update the modal's content.
+                document.getElementById('modal-service-title').textContent = service.title;
+                document.getElementById('modal-service-description').textContent = service.desc;
+
+                const docList = document.getElementById('modal-document-list');
+                docList.innerHTML = ''; // Clear previous items
+
+                service.docs.forEach(doc => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item d-flex align-items-center';
+                    li.innerHTML = `<i class="bi bi-file-earmark-check-fill text-primary me-3"></i> ${doc}`;
+                    docList.appendChild(li);
+                });
+            }
+        })
+    </script>
+</body>
+</html>
