@@ -40,82 +40,45 @@
 
         /* LOGO STYLES */
         .navbar-brand img {
-        height: 50px; /* Adjusted size */
-        width: 50px;  /* Made equal to height */
-        max-height: 50px; 
-        
-        /* *** CHANGES FOR CIRCLE SHAPE *** */
-        border-radius: 50%; /* Makes the image a perfect circle */
-        object-fit: cover;  /* Ensures image content fills the circle */
-        border: 2px solid var(--primary-color); /* Optional: Adds a subtle, themed border */
-    }
+            height: 50px; 
+            width: 50px; 
+            max-height: 50px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid var(--primary-color); 
+        }
 
         .hero-section {
-    /* Replace 'path/to/your/image.jpg' with the actual path */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Optional: Makes the background scroll-independent (Parallax effect) */
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    padding-top: 56px; 
-}
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding-top: 56px; 
+        }
         
         /* --- TYPING ANIMATION STYLES (Kept for completeness) --- */
-        .hero-section .typed-text-container {
-            display: inline-block;
-            min-height: 1.2em;
-        }
-
+        .hero-section .typed-text-container { display: inline-block; min-height: 1.2em; }
         .hero-section .typed-text {
-            color: var(--accent-vibrant);
-            font-weight: 700;
-            overflow: hidden;
-            border-right: .15em solid var(--accent-vibrant);
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: .05em;
-            animation:
-                typing 3.5s steps(40, end),
-                blink-caret .75s step-end infinite;
-            width: 0;
-            display: inline-block;
-            vertical-align: middle;
+            color: var(--accent-vibrant); font-weight: 700; overflow: hidden; border-right: .15em solid var(--accent-vibrant);
+            white-space: nowrap; margin: 0 auto; letter-spacing: .05em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            width: 0; display: inline-block; vertical-align: middle;
         }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--accent-vibrant); }
-        }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--accent-vibrant); } }
         /* ------------------------------------------- */
 
         .stat-box {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--primary-color);
-            transition: transform 0.3s;
+            background-color: var(--card-bg); border-radius: 10px; padding: 20px; text-align: center;
+            border-bottom: 4px solid var(--primary-color); transition: transform 0.3s;
         }
         .service-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            padding: 30px;
-            transition: all 0.4s ease;
-            height: 100%;
-            text-align: center;
-            border: 1px solid transparent; 
-            color: var(--text-color); 
-            cursor: pointer; 
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            background-color: var(--card-bg); border-radius: 10px; padding: 30px; transition: all 0.4s ease;
+            height: 100%; text-align: center; border: 1px solid transparent; color: var(--text-color); 
+            cursor: pointer; display: flex; flex-direction: column; justify-content: space-between;
         }
         .service-card:hover {
             border-color: var(--primary-color);
@@ -124,151 +87,60 @@
         .text-muted {
             color: var(--muted-text) !important;
         }
-        .icon-box i {
-            font-size: 2.8rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            display: block;
-        }
         
+        /* UPDATED NEW IMAGE CSS */
+.icon-box img {
+    /* Increased size from 80px to 100px */
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    /* Adjust border if needed, 3px still looks good at 100px */
+    border: 3px solid var(--primary-color); 
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+    transition: transform 0.3s;
+}
+
+.service-card:hover .icon-box img {
+    transform: scale(1.08) rotate(2deg); 
+}
+
         /* --- MARQUEE STYLES --- */
-        .about-marquee {
-            overflow: hidden;
-            background-color: var(--card-bg); 
-            padding: 15px 0;
-            border-top: 2px solid var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .about-marquee .marq {
-            white-space: nowrap;
-            display: inline-block;
-            animation: marquee-roll 30s linear infinite; 
-        }
-
-        .about-marquee span {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--accent-vibrant);
-            padding: 0 40px; 
-            display: inline-block;
-        }
-
-        @keyframes marquee-roll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
+        .about-marquee { overflow: hidden; background-color: var(--card-bg); padding: 15px 0; border-top: 2px solid var(--primary-color); border-bottom: 2px solid var(--primary-color); }
+        .about-marquee .marq { white-space: nowrap; display: inline-block; animation: marquee-roll 30s linear infinite; }
+        .about-marquee span { font-size: 1.1rem; font-weight: 600; color: var(--accent-vibrant); padding: 0 40px; display: inline-block; }
+        @keyframes marquee-roll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
         /* --- END MARQUEE STYLES --- */
         
         /* --- WHATSAPP FLOATING ICON STYLES --- */
-        .whatsapp-float {
-            position: fixed; 
-            bottom: 25px; 
-            right: 25px; 
-            z-index: 1000; 
-            cursor: pointer; 
-            display: flex; 
-            align-items: center; 
-            text-decoration: none;
-            width: auto;
-        }
-        .whatsapp-icon {
-            background-color: var(--whatsapp-color); 
-            width: 55px; 
-            height: 55px; 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
-            transition: transform 0.3s ease;
-        }
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; z-index: 1000; cursor: pointer; display: flex; align-items: center; text-decoration: none; width: auto; }
+        .whatsapp-icon { background-color: var(--whatsapp-color); width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease; }
         .whatsapp-icon i { color: white; font-size: 30px; }
-        
-        .whatsapp-message {
-            background-color: var(--bubble-bg-light); 
-            color: var(--bubble-text-dark); 
-            padding: 10px 15px; 
-            border-radius: 20px; 
-            margin-right: 5px; 
-            white-space: nowrap; 
-            font-size: 14px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); 
-            animation: bounce-horizontal 2s ease-in-out infinite; 
-        }
-
-        @keyframes bounce-horizontal {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(-5px); } 
-        }
-
-        .whatsapp-float:hover .whatsapp-icon { 
-            transform: scale(1.05); 
-        }
+        .whatsapp-message { background-color: var(--bubble-bg-light); color: var(--bubble-text-dark); padding: 10px 15px; border-radius: 20px; margin-right: 5px; white-space: nowrap; font-size: 14px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); animation: bounce-horizontal 2s ease-in-out infinite; }
+        @keyframes bounce-horizontal { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(-5px); } }
+        .whatsapp-float:hover .whatsapp-icon { transform: scale(1.05); }
 
         @media (max-width: 767px) {
-            .whatsapp-float { 
-                bottom: 15px; 
-                right: 15px; 
-            }
+            .whatsapp-float { bottom: 15px; right: 15px; }
             .hero-section h1 { font-size: 2.2rem; }
             .hero-section { height: auto; padding: 120px 0 80px; }
         }
         /* --- FOOTER STYLES --- */
-        footer {
-            background-color: var(--footer-bg);
-            color: var(--muted-text); 
-            padding-top: 50px;
-        }
-        footer h5 {
-            color: var(--text-color); 
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        footer a {
-            color: var(--muted-text);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        footer a:hover {
-            color: var(--primary-color);
-        }
-        .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            text-align: center;
-            line-height: 40px;
-            margin-right: 10px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .social-links a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-2px);
-            color: white;
-        }
+        footer { background-color: var(--footer-bg); color: var(--muted-text); padding-top: 50px; }
+        footer h5 { color: var(--text-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; margin-bottom: 20px; font-weight: 600; }
+        footer a { color: var(--muted-text); text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: var(--primary-color); }
+        .social-links a { display: inline-block; width: 40px; height: 40px; border-radius: 50%; background-color: var(--card-bg); color: var(--text-color); text-align: center; line-height: 40px; margin-right: 10px; transition: background-color 0.3s, transform 0.3s; }
+        .social-links a:hover { background-color: var(--primary-color); transform: translateY(-2px); color: white; }
 
         /* --- MODAL STYLES --- */
-        .modal-content {
-            background-color: var(--card-bg);
-            border: 1px solid var(--primary-color);
-        }
-        .modal-header {
-            border-bottom: 1px solid rgba(23, 162, 184, 0.3);
-        }
-        .modal-header h5 {
-            color: var(--accent-vibrant); 
-        }
-        .list-group-item {
-            background-color: var(--dark-bg);
-            border-color: rgba(23, 162, 184, 0.2);
-            color: var(--text-color);
-        }
+        .modal-content { background-color: var(--card-bg); border: 1px solid var(--primary-color); }
+        .modal-header { border-bottom: 1px solid rgba(23, 162, 184, 0.3); }
+        .modal-header h5 { color: var(--accent-vibrant); }
+        .list-group-item { background-color: var(--dark-bg); border-color: rgba(23, 162, 184, 0.2); color: var(--text-color); }
     </style>
 </head>
 <body>
@@ -421,54 +293,79 @@
                 <p class="text-center text-muted mb-5">Click on any service card or button to see the detailed required documents! 👇</p>
                 
                 <div class="row g-4 mb-5 justify-content-center">
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="gst">
-                        <div class="icon-box"><i class="bi bi-receipt-cutoff"></i></div>
+                        <div class="icon-box">
+                            <img src="images/gst-filing.png" alt="GST Filing Service" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">GST Registration & Filing</h4>
                         <p class="text-muted mb-3">Hassle-free registration and timely monthly/quarterly return submissions.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="it">
-                        <div class="icon-box"><i class="bi bi-file-earmark-person"></i></div>
+                        <div class="icon-box">
+                            <img src="images/income-tax.png" alt="Income Tax Filing Service" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">Income Tax Filing</h4>
                         <p class="text-muted mb-3">Expert ITR filing, tax computation, and full audit support for businesses and individuals.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="pfesi">
-                        <div class="icon-box"><i class="bi bi-shield-lock-fill"></i></div>
+                        <div class="icon-box">
+                            <img src="images/pf-esi.png" alt="PF ESI Compliance" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">PF & ESI Compliance</h4>
                         <p class="text-muted mb-3">Mandatory registration and accurate filing of employee contributions.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="tds">
-                        <div class="icon-box"><i class="bi bi-bank"></i></div>
+                        <div class="icon-box">
+                            <img src="images/tds-tax.png" alt="TDS Filing Service" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">TDS Registration & Filing</h4>
                         <p class="text-muted mb-3">Handling all aspects of Tax Deducted at Source (TDS) and TCS compliance.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="books">
-                        <div class="icon-box"><i class="bi bi-book-half"></i></div>
+                        <div class="icon-box">
+                            <img src="images/book-keeping.png" alt="Accounts & Book Keeping" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">Accounts & Book Keeping</h4>
                         <p class="text-muted mb-3">Professional daily transaction recording using Tally & Zoho Books.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="audit">
-                        <div class="icon-box"><i class="bi bi-search"></i></div>
+                        <div class="icon-box">
+                            <img src="images/internal-audit.png" alt="Internal Audit Service" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">Internal Audit</h4>
                         <p class="text-muted mb-3">Systematic review of financial operations to improve efficiency and detect risks.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="tally">
-                        <div class="icon-box"><i class="bi bi-laptop"></i></div>
+                        <div class="icon-box">
+                            <img src="images/tally-support.png" alt="Tally Zoho Books Support" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">Tally & Zoho Books Support</h4>
                         <p class="text-muted mb-3">Setup, configuration, troubleshooting, and training for leading accounting software.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                     <div class="col-lg-3 col-md-6"><div class="service-card" data-bs-toggle="modal" data-bs-target="#serviceModal" data-service-id="reg">
-                        <div class="icon-box"><i class="bi bi-folder-check"></i></div>
+                        <div class="icon-box">
+                            <img src="images/business-reg.png" alt="Business Registration" loading="lazy">
+                        </div>
                         <h4 class="fw-bold mt-3">Business Registrations</h4>
                         <p class="text-muted mb-3">Processing for **IE Code**, **MSME Certificate**, and **PAN Card** applications.</p>
                         <button class="btn btn-sm btn-outline-primary mt-2 w-100">Know More Details <i class="bi bi-arrow-right"></i></button>
-                        </div></div>
+                    </div></div>
+                    
                 </div>
 
                 <div class="text-center mt-5">
@@ -495,11 +392,11 @@
                 <div class="row g-5">
                     <div class="col-lg-7">
                         <form id="contactForm" class="p-4 rounded" style="background-color: #2c2c44;">
-                            <div class="mb-3"><label for="name" class="form-label">Your Name</label><input type="text" class="form-control" id="name" required></div>
-                            <div class="mb-3"><label for="email" class="form-label">Email Address</label><input type="email" class="form-control" id="email" required></div>
-                            <div class="mb-3"><label for="phone" class="form-label">Phone Number</label><input type="tel" class="form-control" id="phone" placeholder="98765 43210" required></div>
-                            <div class="mb-3"><label for="subject" class="form-label">Subject</label><input type="text" class="form-control" id="subject" placeholder="E.g., GST Inquiry" required></div>
-                            <div class="mb-4"><label for="message" class="form-label">Message</label><textarea class="form-control" id="message" rows="5" placeholder="Tell us more about your project or query..."></textarea></div>
+                            <div class="mb-3"><label for="name" class="form-label">Your Name</label><input type="text" class="form-control" id="name" name="from_name" required></div>
+                            <div class="mb-3"><label for="email" class="form-label">Email Address</label><input type="email" class="form-control" id="email" name="from_email" required></div>
+                            <div class="mb-3"><label for="phone" class="form-label">Phone Number</label><input type="tel" class="form-control" id="phone" name="from_phone" placeholder="98765 43210" required></div>
+                            <div class="mb-3"><label for="subject" class="form-label">Subject</label><input type="text" class="form-control" id="subject" name="subject" placeholder="E.g., GST Inquiry" required></div>
+                            <div class="mb-4"><label for="message" class="form-label">Message</label><textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us more about your project or query..."></textarea></div>
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
                         </form>
                     </div>
@@ -590,168 +487,146 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
+    
+    <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
-        // --- EmailJS Setup ---
+        // --- EmailJS Setup (Contact Form Submission) ---
         (function() {
-            // Initialize EmailJS. Use the Public Key provided in your last prompt.
-            // *** IMPORTANT: Replace with your actual key ***
+            // !!! IMPORTANT: Replace with your actual EmailJS Public Key
             emailjs.init({ publicKey: "kkIs0AW_QWCwwpPYk" });
         })();
     
         document.getElementById("contactForm").addEventListener("submit", function(e) {
             e.preventDefault();
             
-            const submitButton = e.target.querySelector('button[type="submit"]');
+            const form = e.target;
+            const submitButton = form.querySelector('button[type="submit"]');
             submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
+            submitButton.textContent = 'Sending...';
 
-            const params = {
-                from_name: document.getElementById("name").value,
-                from_email: document.getElementById("email").value,
-                // New phone field included in parameters
-                phone: document.getElementById("phone").value, 
-                subject: document.getElementById("subject").value,
-                message: document.getElementById("message").value,
-                time: new Date().toLocaleString()
-            };
-
-            // Send the email. Use the Service ID and Template ID from your last prompt.
-            // *** IMPORTANT: Replace with your actual service/template IDs ***
-            emailjs.send("service_wghet5k", "template_urke8fl", params)
-                .then(function(response) {
-                    alert("✅ Thank you! Your message was sent successfully.");
-                    document.getElementById("contactForm").reset();
+            // !!! IMPORTANT: Replace 'service_YOURID' and 'template_YOURID' with your actual EmailJS IDs
+            emailjs.sendForm('service_YOURID', 'template_YOURID', form)
+                .then(function() {
+                    alert('Message Sent Successfully! We will be in touch shortly.');
+                    form.reset(); 
+                    submitButton.textContent = 'Send Message'; 
                 }, function(error) {
-                    alert("❌ Failed to send your message. Please try calling us instead.");
-                    console.error("EmailJS Error:", error);
-                })
-                .finally(function() {
+                    console.error('Send email error:', error);
+                    alert('Failed to send the message. Please try calling us directly.');
+                    submitButton.textContent = 'Try Again';
+                }).finally(function() {
                     submitButton.disabled = false;
-                    submitButton.textContent = "Send Message";
                 });
         });
-        
-        // --- Service Data Configuration with detailed requirements ---
+
+        // --- Service Modal Dynamic Content Script ---
         const serviceData = {
             gst: {
                 title: "GST Registration & Filing",
-                desc: "Seamless process for obtaining GST registration and accurate filing of all returns (GSTR-1, GSTR-3B, Annual Return).",
-                docs: [
-                    "PAN Card of Applicant/Business",
-                    "Aadhaar Card/ID Proof of Directors/Partners/Proprietor",
-                    "Proof of Business Address (Rent Agreement, Sale Deed, or Utility Bill NOT older than 2 months)",
-                    "Bank Account Proof (Cancelled Cheque or Bank Statement)",
-                    "Photograph of Directors/Partners/Proprietor",
-                    "Board Resolution or Authorization Letter (for companies/firms)"
+                description: "This service covers applying for a new GST registration and managing all mandatory monthly (GSTR-1, GSTR-3B) or quarterly filings to ensure full compliance with Indian tax law.",
+                documents: [
+                    "PAN Card of the Proprietor/Partners/Directors",
+                    "Aadhaar Card of the Proprietor/Partners/Directors",
+                    "Business Address Proof (Electricity Bill / Rental Agreement)",
+                    "Cancelled Cheque / Bank Statement",
+                    "Digital Signature Certificate (DSC) - *Optional for Proprietorship*",
+                    "Company/Partnership Deed (If applicable)"
                 ]
             },
             it: {
-                title: "Income Tax Filing",
-                desc: "Expert ITR filing, tax computation, and full audit support for businesses and individuals, ensuring maximum compliance and optimization.",
-                docs: [
-                    "PAN Card and Aadhaar Card of Applicant",
-                    "Form 16/Salary Slips (for salaried individuals)",
-                    "Bank Account Statements (last 1 year)",
-                    "Financial Statements (P&L, Balance Sheet) (for businesses)",
-                    "TDS Certificates (Form 16A/26AS)",
-                    "Investment proofs (if claiming deductions)"
+                title: "Income Tax Filing (Business & Individual)",
+                description: "We handle your annual Income Tax Return (ITR) filing, tax computation, advance tax planning, and provide representation and documentation support for scrutiny or audits.",
+                documents: [
+                    "PAN & Aadhaar Card",
+                    "Bank Statements (for the relevant Financial Year)",
+                    "Form 16/Form 16A (TDS Certificates)",
+                    "Capital Gains Statement (if applicable)",
+                    "Investment Proofs (for deductions under Section 80C, 80D, etc.)"
                 ]
             },
             pfesi: {
                 title: "PF & ESI Compliance",
-                desc: "Mandatory registration and accurate monthly filing of employee contributions, including support for PF claims and advances.",
-                docs: [
-                    "PAN Card and Aadhaar Card of Proprietor/Directors",
-                    "Address Proof of Business",
-                    "Certificate of Incorporation/Registration Certificate",
-                    "List of Employees and their salary details",
-                    "Bank Account Details and Cancelled Cheque"
+                description: "Mandatory registration under EPF and ESI schemes, followed by monthly challan generation and filing of employee contributions and returns.",
+                documents: [
+                    "Business Registration Certificate/License (e.g., Shop & Establishment Act)",
+                    "Address Proof of establishment",
+                    "List of all employees with their basic details (Name, Father's Name, Date of Joining, Salary)",
+                    "Bank details and PAN/Aadhaar of the establishment"
                 ]
             },
             tds: {
                 title: "TDS Registration & Filing",
-                desc: "Handling all aspects of Tax Deducted at Source (TDS) and Tax Collected at Source (TCS) compliance, including TAN registration and quarterly returns.",
-                docs: [
-                    "Company/Individual PAN Card",
-                    "Address Proof of Tax Deductor",
-                    "Certificate of Incorporation/Partnership Deed",
-                    "Mobile Number and Email ID",
-                    "Bank Account Details"
+                description: "Obtaining TAN registration and ensuring timely and accurate filing of quarterly TDS returns (Form 24Q, 26Q, etc.), including generating Form 16A/16.",
+                documents: [
+                    "PAN Card of the entity",
+                    "Address Proof and Nature of Business",
+                    "Details of all payments made where TDS was deducted",
+                    "Digital Signature Certificate (DSC)"
                 ]
             },
             books: {
                 title: "Accounts & Book Keeping",
-                desc: "Professional daily transaction recording, ledger maintenance, and financial reporting using industry-standard software like Tally and Zoho Books.",
-                docs: [
-                    "Sales & Purchase Invoices (Monthly/Quarterly)",
-                    "Bank/Cash Book Statements",
-                    "Expense Vouchers (Rent, Utility Bills, etc.)",
-                    "Inventory Details (if applicable)",
-                    "Existing Accounting Data/Software Backup"
+                description: "Maintaining accurate and up-to-date financial records, including cash, bank, journal, and ledger entries using professional tools like Tally and Zoho Books.",
+                documents: [
+                    "All Sales/Purchase Invoices",
+                    "Bank Statements and Cash Vouchers",
+                    "Expense Bills and Receipts",
+                    "Previous year's Financial Statements (for new clients)"
                 ]
             },
             audit: {
                 title: "Internal Audit",
-                desc: "Systematic review of financial operations, internal controls, and compliance status to improve efficiency, accuracy, and detect potential risks and fraud.",
-                docs: [
-                    "Previous Year's Audited Financial Statements",
-                    "Complete Sales and Purchase Registers",
-                    "Bank Reconciliation Statements",
-                    "Inventory Records and Policies",
-                    "Internal Control Manuals (if any)"
+                description: "A systematic and independent appraisal activity within an organization to examine and evaluate the adequacy and effectiveness of internal control systems.",
+                documents: [
+                    "Financial Statements (Balance Sheet, P&L)",
+                    "Internal Policy Documents & Standard Operating Procedures (SOPs)",
+                    "Inventory Records and Asset Register",
+                    "Compliance and Statutory Filings History"
                 ]
             },
             tally: {
                 title: "Tally & Zoho Books Support",
-                desc: "Complete setup, configuration, troubleshooting, data migration, and personalized training for leading accounting software solutions.",
-                docs: [
-                    "Software License Details (if existing)",
-                    "Current Chart of Accounts",
-                    "Opening Balances Data",
-                    "User Access Requirements",
-                    "Specific Customization Needs"
+                description: "End-to-end technical support including software installation, chart of accounts setup, customized report generation, and staff training.",
+                documents: [
+                    "Details of existing accounting software setup (if migrating)",
+                    "Access credentials for Tally/Zoho (or willingness to provide remote access)",
+                    "Specific requirements for customized reports/modules"
                 ]
             },
             reg: {
-                title: "Business Registrations",
-                desc: "Processing various mandatory business registrations, including MSME Udyam Certificate, Import Export (IE) Code, and PAN Card applications.",
-                docs: [
-                    "Aadhaar Card and PAN Card of Applicant",
-                    "Business Bank Account Details",
-                    "Proof of Business Activity (e.g., invoices/licenses)",
-                    "Utility Bill/Rent Agreement (for address proof)",
-                    "MOA/AOA (for Company registration)"
+                title: "Business Registrations (MSME, IE Code, PAN)",
+                description: "Assistance with various mandatory and beneficial business registrations including Udyam (MSME) Certificate, Import Export (IE) Code, and obtaining new PAN/TAN cards.",
+                documents: [
+                    "Aadhaar & PAN of the applicant",
+                    "Business Activity/Nature of Work details",
+                    "Bank Account details (for IE Code and Udyam)",
+                    "Proof of Office Address"
                 ]
             }
         };
 
-        // Event listener to populate the modal on show
-        const serviceModal = document.getElementById('serviceModal')
-        serviceModal.addEventListener('show.bs.modal', event => {
-            // Button that triggered the modal
-            const button = event.relatedTarget
-            // Extract info from data-service-id attribute
-            const serviceId = button.getAttribute('data-service-id')
-            const service = serviceData[serviceId]
+        const serviceModal = document.getElementById('serviceModal');
+        serviceModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const serviceId = button.getAttribute('data-service-id');
+            const data = serviceData[serviceId];
 
-            if (service) {
-                // Update the modal's content.
-                document.getElementById('modal-service-title').textContent = service.title;
-                document.getElementById('modal-service-description').textContent = service.desc;
-
-                const docList = document.getElementById('modal-document-list');
-                docList.innerHTML = ''; // Clear previous items
-
-                service.docs.forEach(doc => {
+            if (data) {
+                document.getElementById('modal-service-title').textContent = data.title;
+                document.getElementById('modal-service-description').textContent = data.description;
+                
+                const ul = document.getElementById('modal-document-list');
+                ul.innerHTML = ''; // Clear previous list
+                
+                data.documents.forEach(doc => {
                     const li = document.createElement('li');
-                    li.className = 'list-group-item d-flex align-items-center';
-                    li.innerHTML = `<i class="bi bi-file-earmark-check-fill text-primary me-3"></i> ${doc}`;
-                    docList.appendChild(li);
+                    li.className = 'list-group-item';
+                    li.innerHTML = `<i class="bi bi-file-earmark-check-fill me-2 text-primary"></i> ${doc}`;
+                    ul.appendChild(li);
                 });
             }
-        })
+        });
     </script>
 </body>
 </html>
